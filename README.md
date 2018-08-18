@@ -6,5 +6,5 @@ A Python module for generating "correct horse battery staple" like random pass p
 
 Please fork the repository and raise a pull request (PR). PRs require one approval in order to be merged into the master branch.
 
-It is not possible to commit directly to the *master* branch.
+Issue tracking is maintained on a public [Trello board](https://trello.com/b/ZiTGwaif/fraise). Please contact the repo owner if you would like access to the board. Commits should be prefixed with the Trello card ref, for example "FR-100 Did the thing". A link to the PR should be added to the card.
 
