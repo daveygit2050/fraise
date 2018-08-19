@@ -1,9 +1,6 @@
 init:
-	pipenv install
-	pipenv shell
-	export PYTHONPATH=${PYTHONPATH}:${PWD}
+	pip install pipenv
+	pipenv install --dev
 
 test:
-	py.test tests
-
-.PHONY: init test
+	pipenv run nosetests -v
