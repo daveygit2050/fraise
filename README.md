@@ -10,9 +10,14 @@ pip install fraise
 
 ## Usage
 ```
-from fraise import fraise
+# Import the package
+import fraise
 
-password = fraise.generate()
+# By default, generate will return four lowercase words
+passphrase = fraise.generate()
+
+# You can set the number of words to include with word_count
+passphrase = fraise.generate(word_count = 8)
 ```
 
 ## Contributing
