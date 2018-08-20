@@ -3,10 +3,14 @@ init:
 	echo "PYTHONPATH=${PYTHONPATH}:${PWD}/fraise" > .env
 	pipenv install --dev
 
+clean:
+	rm -rf build
+	rm -rf dist
+
 test:
 	pipenv run nosetests -v
 
-build: test
+build: clean test
 	python setup.py sdist bdist_wheel
 
 upload:
