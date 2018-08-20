@@ -1,5 +1,6 @@
 init:
 	pip install --user pipenv twine
+	echo "PYTHONPATH=${PYTHONPATH}:${PWD}/fraise" > .env
 	pipenv install --dev
 
 test:
