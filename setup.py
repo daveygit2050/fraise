@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='fraise',
-      version='1.0.0',
+      version='1.0.1',
       description='Generate memorable pass phrases',
       url='http://github.com/daveygit2050/fraise',
       author='Dave Randall',
