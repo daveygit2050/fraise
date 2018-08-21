@@ -11,13 +11,15 @@ pip install fraise
 ## Usage
 ```
 # Import the package
-import fraise
+>>> import fraise
 
 # By default, generate will return four lowercase words
-passphrase = fraise.generate()
+>>> fraise.generate()
+'luck unrewarded ghosts accumulation'
 
 # You can set the number of words to include with word_count
-passphrase = fraise.generate(word_count = 8)
+>>> fraise.generate(word_count = 8)
+'broadband hansom heaving inroad flyweight shopping abets realty'
 ```
 
 ## Contributing
@@ -43,3 +45,13 @@ make test
 ```
 make build
 ```
+
+_Tests will be run first._
+
+### Releasing
+
+```
+make release
+```
+
+_Working directory must be clean._

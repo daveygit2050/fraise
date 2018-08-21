@@ -13,5 +13,11 @@ test:
 build: clean test
 	python setup.py sdist bdist_wheel
 
-upload:
-	twine upload dist/*
+release:
+	git checkout master && git pull
+	git diff-index --quiet HEAD
+	VERSION=$(python setup.py --version); \
+	TAG_NAME=v${VERSION}; \
+	twine upload dist/fraise-${VERSION}*; \
+	git tag -a ${TAG_NAME}; \
+	git push origin ${TAG_NAME}
