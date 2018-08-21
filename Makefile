@@ -19,5 +19,5 @@ release:
 	VERSION=$(python setup.py --version); \
 	TAG_NAME=v${VERSION}; \
 	twine upload dist/fraise-${VERSION}*; \
-	git tag -a ${TAG_NAME}; \
+	git tag -a ${TAG_NAME} -m ${TAG_NAME}; \
 	git push origin ${TAG_NAME}
