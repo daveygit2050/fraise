@@ -1,3 +1,7 @@
+.EXPORT_ALL_VARIABLES:
+
+version = $(shell python setup.py --version)
+
 init:
 	pip install --user pipenv twine
 	echo "PYTHONPATH=${PYTHONPATH}:${PWD}/fraise" > .env
@@ -13,11 +17,8 @@ test:
 build: clean test
 	python setup.py sdist bdist_wheel
 
-release:
-	git checkout master && git pull
-	git diff-index --quiet HEAD
-	VERSION=$(python setup.py --version); \
-	TAG_NAME=v${VERSION}; \
-	twine upload dist/fraise-${VERSION}*; \
-	git tag -a ${TAG_NAME} -m ${TAG_NAME}; \
-	git push origin ${TAG_NAME}
+release: build
+	@echo "Version: $$version"
+	twine upload dist/fraise-${version}*
+	git tag -a v$$version -m v$$version
+	git push --tags
