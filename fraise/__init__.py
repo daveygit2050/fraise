@@ -1,1 +1,1 @@
-from common import generate
+from .common import generate
