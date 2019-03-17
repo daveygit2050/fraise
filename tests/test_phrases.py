@@ -17,3 +17,9 @@ class TestPhrases:
         match = re.match(r'^([a-z]+\s){7}[a-z]+$', passphrase)
         print("Generated passphrase: {}".format(passphrase))
         assert match
+
+    # Should return a passphrase of at least 128 characters
+    def test_generate_with_minimum_length(self):
+        passphrase = fraise.generate(minimum_length=128)
+        print("Generated passphrase: {}".format(passphrase))
+        assert len(passphrase) >= 128
