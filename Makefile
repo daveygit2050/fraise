@@ -15,7 +15,7 @@ test:
 	pipenv run py.test
 
 build: clean test
-	python setup.py sdist bdist_wheel
+	pipenv run python setup.py sdist bdist_wheel
 
 release: build
 	@echo "Version: $$version"
