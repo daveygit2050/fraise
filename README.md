@@ -24,6 +24,10 @@ pip install fraise
 # Require a passphrase of at least n characters with minimum_length
 >>> fraise.generate(minimum_length=32)
 'virile pullets resuming worst unengaged phosphates'
+
+# Change the separation character
+>>> fraise.generator(separator='-')
+'readers-reapply-bossiest-bylaw'
 ```
 
 ## Contributing

@@ -23,3 +23,10 @@ class TestPhrases:
         passphrase = fraise.generate(minimum_length=128)
         print("Generated passphrase: {}".format(passphrase))
         assert len(passphrase) >= 128
+
+    # Should return four dash seperated lowercase words
+    def test_generate_with_seperator(self):
+        passphrase = fraise.generate(separator="-")
+        match = re.match(r'^([a-z]+-){3}[a-z]+$', passphrase)
+        print("Generated passphrase: {}".format(passphrase))
+        assert match
