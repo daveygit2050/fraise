@@ -3,7 +3,7 @@
 version = $(shell python setup.py --version)
 
 init:
-	pip install --user pipenv twine
+	pip install pipenv --upgrade
 	pipenv install --dev
 
 clean:
