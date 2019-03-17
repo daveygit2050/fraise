@@ -11,7 +11,7 @@ clean:
 	rm -rf dist
 
 test:
-	pipenv run nosetests -v
+	pipenv run py.test
 
 build: clean test
 	python setup.py sdist bdist_wheel
