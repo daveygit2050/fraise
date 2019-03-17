@@ -18,8 +18,12 @@ pip install fraise
 'luck unrewarded ghosts accumulation'
 
 # You can set the number of words to include with word_count
->>> fraise.generate(word_count = 8)
+>>> fraise.generate(word_count=8)
 'broadband hansom heaving inroad flyweight shopping abets realty'
+
+# Require a passphrase of at least n characters with minimum_length
+>>> fraise.generate(minimum_length=32)
+'virile pullets resuming worst unengaged phosphates'
 ```
 
 ## Contributing
@@ -46,12 +50,10 @@ make test
 make build
 ```
 
-_Tests will be run first._
+_Tests will be run first and the directory cleaned._
 
 ### Releasing
 
 ```
 make release
 ```
-
-_Working directory must be clean._
