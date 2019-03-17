@@ -1,1 +1,2 @@
-from .common import generate
+from .phrases import generate
+from .words import get_random_word

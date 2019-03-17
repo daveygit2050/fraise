@@ -3,8 +3,7 @@
 version = $(shell python setup.py --version)
 
 init:
-	pip install --user pipenv twine
-	echo "PYTHONPATH=${PYTHONPATH}:${PWD}/fraise" > .env
+	pip install pipenv --upgrade
 	pipenv install --dev
 
 clean:
@@ -12,7 +11,7 @@ clean:
 	rm -rf dist
 
 test:
-	pipenv run nosetests -v
+	pipenv run py.test
 
 build: clean test
 	python setup.py sdist bdist_wheel
