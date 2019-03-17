@@ -9,6 +9,7 @@ init:
 clean:
 	rm -rf build
 	rm -rf dist
+	rm -rf fraise.egg-info
 
 test:
 	pipenv run py.test
