@@ -4,7 +4,6 @@ version = $(shell python setup.py --version)
 
 init:
 	pip install --user pipenv twine
-	echo "PYTHONPATH=${PYTHONPATH}:${PWD}/fraise" > .env
 	pipenv install --dev
 
 clean:
