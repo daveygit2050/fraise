@@ -28,6 +28,10 @@ pip install fraise
 # Change the separation character
 >>> fraise.generator(separator='-')
 'readers-reapply-bossiest-bylaw'
+
+# Only use words of n characters or less
+>>> fraise.generate(max_word_length=4)
+'duct pond anon four'
 ```
 
 ## Contributing
