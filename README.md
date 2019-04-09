@@ -1,32 +1,31 @@
 # fraise
 
-A Python module for generating "correct horse battery staple" like random pass phrases.
+A Python module for generating `correct horse battery staple` like random pass phrases.
 
 ## Installation
 
-```
+```bash
 pip install fraise
 ```
 
 ## Usage
-```
-# Import the package
+```python
 >>> import fraise
 
 # By default, generate will return four lowercase words
 >>> fraise.generate()
 'luck unrewarded ghosts accumulation'
 
-# You can set the number of words to include with word_count
+# Set the number of words
 >>> fraise.generate(word_count=8)
 'broadband hansom heaving inroad flyweight shopping abets realty'
 
-# Require a passphrase of at least n characters with minimum_length
+# Require a passphrase of at least n character
 >>> fraise.generate(minimum_length=32)
 'virile pullets resuming worst unengaged phosphates'
 
 # Change the separation character
->>> fraise.generator(separator='-')
+>>> fraise.generate(separator='-')
 'readers-reapply-bossiest-bylaw'
 
 # Only use words of n characters or less
@@ -42,19 +41,19 @@ Issue tracking is maintained on a public [Trello board](https://trello.com/b/ZiT
 
 ### Initial setup
 
-```
+```bash
 make init
 ```
 
 ### Testing
 
-```
+```bash
 make test
 ```
 
 ### Building
 
-```
+```bash
 make build
 ```
 
@@ -62,6 +61,6 @@ _Tests will be run first and the directory cleaned._
 
 ### Releasing
 
-```
+```bash
 make release
 ```
