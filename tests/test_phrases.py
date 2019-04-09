@@ -30,3 +30,11 @@ class TestPhrases:
         match = re.match(r'^([a-z]+-){3}[a-z]+$', passphrase)
         print("Generated passphrase: {}".format(passphrase))
         assert match
+
+    # Should return a passphrase where no single word is longer than 4 characters
+    def test_generate_with_max_word_length(self):
+        passphrase = fraise.generate(max_word_length=4)
+        print("Generated passphrase: {}".format(passphrase))
+        words_in_passphrase = passphrase.split(' ')
+        too_long_words = [word for word in words_in_passphrase if len(word) > 4]
+        assert not too_long_words

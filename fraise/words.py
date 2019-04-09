@@ -58112,6 +58112,7 @@ english_words = [
 ]
 
 
-def get_random_word():
-    random_word = english_words[random.randrange(0, len(english_words))]
+def get_random_word(max_word_length=8):
+    potential_words = [word for word in english_words if len(word) <= max_word_length]
+    random_word = potential_words[random.randrange(0, len(potential_words))]
     return random_word

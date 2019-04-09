@@ -19,6 +19,6 @@ build: clean test
 
 release: build
 	@echo "Version: $$version"
-	twine upload dist/fraise-${version}*
+	pipenv run twine upload dist/fraise-${version}*
 	git tag -a v$$version -m v$$version
 	git push --tags
