@@ -1,6 +1,6 @@
 # fraise
 
-A Python module for generating `correct horse battery staple` like random pass phrases.
+A Python module for generating `correct horse battery staple` like random passphrases.
 
 ## Installation
 
@@ -9,6 +9,35 @@ pip install fraise
 ```
 
 ## Usage
+
+### As an application
+
+```bash
+$ fraise --help
+```
+
+```
+usage: fraise [-h] [--max-word-length MAX_WORD_LENGTH]
+              [--minimum-length MINIMUM_LENGTH] [--separator SEPARATOR]
+              [--word-count WORD_COUNT]
+
+Generate memorable passphrases
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --max-word-length MAX_WORD_LENGTH
+                        The maximum length of each word (default 8)
+  --minimum-length MINIMUM_LENGTH
+                        Minimum length of the phrase (default 16)
+  --separator SEPARATOR
+                        What to put inbetween the words (default space)
+  --word-count WORD_COUNT
+                        How many words to include in the phrase (default 4)
+
+```
+
+### As a library
+
 ```python
 >>> import fraise
 
