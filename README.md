@@ -19,7 +19,7 @@ $ fraise --help
 ```
 usage: fraise [-h] [--max-word-length MAX_WORD_LENGTH]
               [--minimum-length MINIMUM_LENGTH] [--separator SEPARATOR]
-              [--word-count WORD_COUNT]
+              [--word-count WORD_COUNT] [--capitalized]
 
 Generate memorable passphrases
 
@@ -33,7 +33,7 @@ optional arguments:
                         What to put inbetween the words (default space)
   --word-count WORD_COUNT
                         How many words to include in the phrase (default 4)
-
+  --capitalized         Capitalize the first letter of each word in the phrase
 ```
 
 ### As a library
@@ -60,6 +60,10 @@ optional arguments:
 # Only use words of n characters or less
 >>> fraise.generate(max_word_length=4)
 'duct pond anon four'
+
+# Capitalize each word
+>>> fraise.generate(capitalize=True)
+'Sinter Lean Filament Gossip'
 ```
 
 ## Contributing
