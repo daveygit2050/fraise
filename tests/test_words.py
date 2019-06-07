@@ -20,4 +20,18 @@ class TestWords:
                 assert False
         assert True
 
+    def test_word_is_capitalised_on_request(self):
+        """When capitalized is True, the first letter should be upper case and the rest lower"""
+        word = words.get_random_word(capitalized=True)
+        assert word[0].isupper()
+        for letter in word[1:]:
+            assert letter.islower()
 
+    def test_word_is_not_capitalised_by_default(self):
+        """When capitalized is False or omitted, all letters should be lower case"""
+        non_capitalized_word = words.get_random_word(capitalized=False)
+        default_word = words.get_random_word()
+        for letter in non_capitalized_word:
+            assert letter.islower()
+        for letter in default_word:
+            assert letter.islower()

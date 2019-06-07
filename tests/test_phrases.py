@@ -38,3 +38,22 @@ class TestPhrases:
         words_in_passphrase = passphrase.split(' ')
         too_long_words = [word for word in words_in_passphrase if len(word) > 4]
         assert not too_long_words
+
+    def test_generate_with_capitalized_true(self):
+        """When capitalized is true, the first char of each word should be upper case"""
+        passphrase = fraise.generate(capitalized=True)
+        print("Generated passphrase: {}".format(passphrase))
+        words_in_passphrase = passphrase.split(' ')
+        for word in words_in_passphrase:
+            assert word[0].isupper()
+
+    def test_generate_with_capitalized_false(self):
+        """When capitalized is false or ommitted, the first char of each word should be lower case"""
+        uncapitalized_passphrase = fraise.generate(capitalized=False)
+        print("Generated uncapitalized passphrase: {}".format(uncapitalized_passphrase))
+        default_passphrase = fraise.generate()
+        print("Generated default passphrase: {}".format(default_passphrase))
+        for word in uncapitalized_passphrase.split(' '):
+            assert word[0].islower()
+        for word in default_passphrase.split(' '):
+            assert word[0].islower()
