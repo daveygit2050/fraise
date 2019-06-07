@@ -3,7 +3,7 @@ import os
 from setuptools import setup, find_packages
 
 setup(name='fraise',
-      version='1.5.1',
+      version='1.5.2',
       description='Generate memorable pass phrases',
       long_description=open(os.path.join(os.path.dirname(__file__), 'README.md')).read(),
       long_description_content_type="text/markdown",

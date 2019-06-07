@@ -26,7 +26,6 @@ def get_args():
                         help="How many words to include in the phrase (default 4)",
                         type=int)
     parser.add_argument('--capitalized',
-                        default=True,
                         dest='capitalized',
                         help="Capitalize the first letter of each word in the phrase",
                         action='store_true')
