@@ -25,6 +25,11 @@ def get_args():
                         dest='word_count',
                         help="How many words to include in the phrase (default 4)",
                         type=int)
+    parser.add_argument('--capitalized',
+                        default=True,
+                        dest='capitalized',
+                        help="Capitalize the first letter of each word in the phrase",
+                        action='store_true')
     return parser.parse_args()
 
 
@@ -34,5 +39,6 @@ def run():
         max_word_length=args.max_word_length,
         minimum_length=args.minimum_length,
         separator=args.separator,
-        word_count=args.word_count
+        word_count=args.word_count,
+        capitalized=args.capitalized
     ))
