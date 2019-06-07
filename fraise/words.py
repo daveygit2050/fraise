@@ -58112,7 +58112,9 @@ english_words = [
 ]
 
 
-def get_random_word(max_word_length=8):
+def get_random_word(max_word_length=8, capitalized=False):
     potential_words = [word for word in english_words if len(word) <= max_word_length]
     random_word = potential_words[random.randrange(0, len(potential_words))]
+    if capitalized:
+        random_word = random_word.capitalize()
     return random_word

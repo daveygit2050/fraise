@@ -11,7 +11,7 @@ def get_args():
                         help="The maximum length of each word (default 8)",
                         type=int)
     parser.add_argument('--minimum-length',
-                        default=6,
+                        default=16,
                         dest='minimum_length',
                         help="Minimum length of the phrase (default 16)",
                         type=int)
